@@ -9,6 +9,7 @@
     "build": "NODE_OPTIONS=--experimental-json-modules NODE_ENV=production rollup -c",
     "dev": "NODE_OPTIONS=--experimental-json-modules rollup -c -w",
     "clean": "rm -rf .turbo dist .rollup.cache",
+    "clean:docker": "rm -rf .turbo .rollup.cache node_modules",
     "check-types": "tsc --noEmit",
     "lint": "eslint .",
     "lint:staged": "eslint . --fix --quiet"
@@ -19,12 +20,12 @@
     "@material-ui/core": "4.12.4",
     "autoprefixer": "10.4.12",
     "postcss-import": "15.0.0",
-    "rollup-plugin-esbuild": "4.10.1",
     "tailwindcss": "3.2.1",
     "yup": "1.0.0-beta.7"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "23.0.2",
+    "rollup-plugin-esbuild": "4.10.1",
     "@rollup/plugin-image": "3.0.1",
     "@rollup/plugin-json": "5.0.1",
     "@rollup/plugin-node-resolve": "15.0.1",

@@ -15,7 +15,8 @@
     "check-types": "tsc --noEmit",
     "generate": "dotenv -c -- graphql-codegen --config codegen.yml -w",
     "paths": "pathpida --ignorePath ../../.gitignore",
-    "clean": "rm -rf .next .turbo"
+    "clean": "rm -rf .next .turbo",
+    "clean:docker": "rm -rf .turbo node_modules"
   },
   "dependencies": {
     "@apollo/client": "3.7.14",

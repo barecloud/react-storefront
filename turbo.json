@@ -63,6 +63,10 @@
       "cache": false,
       "outputs": []
     },
+    "clean:docker": {
+      "cache": false,
+      "outputs": []
+    },
     "lint:staged": {
       "outputs": []
     },

@@ -18,6 +18,7 @@ module.exports = withBundleAnalyzer({
     formats: ["image/avif", "image/webp"],
   },
   trailingSlash: true,
+  output: "standalone",
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/i,

@@ -8,7 +8,8 @@
 !/.npmrc
 !/package.json
 !/pnpm-lock.yaml
-!/pnpm-workspace.yaml
+!/pnpm-workspace-checkout.yaml
+!/pnpm-workspace-storefront.yaml
 !/turbo.json
 !/.gitignore
 

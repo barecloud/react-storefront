@@ -17,6 +17,7 @@ const config = withTM({
   },
   reactStrictMode: true,
   productionBrowserSourceMaps: true,
+  output: "standalone",
   async redirects() {
     return [
       {

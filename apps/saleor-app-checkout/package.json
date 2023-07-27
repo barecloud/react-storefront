@@ -6,7 +6,7 @@
     "dev": "pnpm run i18n && NODE_OPTIONS='--inspect --require env-vars' next dev -p 3001",
     "test": "jest",
     "test:record": "POLLY_MODE=record jest --runInBand --verbose",
-    "build": "pnpm run i18n && next lint --dir . --quiet && npm run i18n && next build",
+    "build": "pnpm run i18n && next build --no-lint",
     "start": "next start -p 3001",
     "lint": "next lint --dir .",
     "lint:staged": "next lint --dir . --fix --quiet",
@@ -15,10 +15,8 @@
     "i18n:extract": "formatjs extract '{backend,config,content,frontend,graphql,pages,types,utils}/**/*.{js,jsx,ts,tsx}' --format transifex --id-interpolation-pattern '[folder]/[name]/[sha512:contenthash:base64:6]' --out-file content/locales/en.json",
     "i18n:compile": "formatjs compile-folder --ast --format transifex content/locales content/compiled-locales",
     "i18n": "pnpm run i18n:extract && pnpm run i18n:compile",
-    "clean": "rm -rf .next .turbo"
-  },
-  "resolutions": {
-    "graphql": "15.8.0"
+    "clean": "rm -rf .next .turbo",
+    "clean:docker": "rm -rf .turbo node_modules"
   },
   "dependencies": {
     "@adyen/adyen-web": "5.28.2",
@@ -28,7 +26,7 @@
     "@material-ui/lab": "4.0.0-alpha.61",
     "@material-ui/styles": "4.11.5",
     "@mollie/api-client": "3.6.0",
-    "@saleor/app-sdk": "0.34.1",
+    "@saleor/app-sdk": "0.43.0",
     "@saleor/checkout-storefront": "workspace:*",
     "@saleor/macaw-ui": "0.6.7",
     "@sentry/nextjs": "7.32.0",
